@@ -11,29 +11,42 @@ export class Cart extends Component {
     this.context.cart.addStateChangeListener(() => this.render());
   }
 
-  getTotalPrice() {}
+  getTotalItems() {
+    return this.context.cart.items.reduce(
+      (totalItems, product) => totalItems + product.quantity,
+      0
+    );
+  }
+
+  getTotalPrice() {
+    return this.context.cart.items.reduce(
+      (totalPrice, product) => totalPrice + product.quantity * product.price,
+      0
+    );
+  }
 
   render() {
-    const totalCartItems = this.context.cart.items.length;
+    let totalCartItems = this.getTotalItems()
+    let totalPrice = this.getTotalPrice()
     let cartContainer = this.parentElement.find("#cartId");
 
     if (cartContainer.length === 0) {
       cartContainer = $(`
-    <div id="cartId" class="cart">
+    <div id="cartId" class="${BASE_CLASS}">
       <h1>Cart <span class="${BASE_CLASS}__total-indicator">${totalCartItems}</span></h1>
-
-      <div class="cart__summary">
+      <div class="${BASE_CLASS}__summary">
         <h2>Summary</h2>
-        <div class="cart__total-price">
+        <div class="${BASE_CLASS}__total-price">
           <h3>Total Price:</h3>
-          <h3>$1130</h3>
+          <h3 id="totalPrice">$${totalPrice}</h3>
         </div>
       </div>
-      <ul class="cart-items"></ul>
+      <ul class="${BASE_CLASS}-items"></ul>
     </div>
     `);
     } else {
       cartContainer.find("span").text(totalCartItems);
+      cartContainer.find("#totalPrice").text(`$${totalPrice}`);
       cartContainer.find("ul").empty();
     }
 
