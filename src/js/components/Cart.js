@@ -14,7 +14,14 @@ export class Cart extends Component {
   getTotalPrice() {}
 
   render() {
-    const totalCartItems = this.context.cart.items.length;
+    let totalCartItems = 0;
+    if (this.context.cart.items.length != 0) {
+      totalCartItems = this.context.cart.items.reduce(
+        (accumulator, product) => accumulator + product.quantity,
+        0
+      );
+    }
+
     let cartContainer = this.parentElement.find("#cartId");
 
     if (cartContainer.length === 0) {
