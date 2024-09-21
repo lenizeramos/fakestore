@@ -1,5 +1,6 @@
-import { Component } from "./common/component.js"
+import { Component } from "./common/component.js";
 import { Header } from "./components/Header.js";
+import { Product } from "./components/Product.js";
 
 export class App extends Component {
   render() {
@@ -8,6 +9,8 @@ export class App extends Component {
     const children = $(`
       <main></main>
     `);
+
+    new Product(children);
 
     this.parentElement.append(children);
   }
