@@ -26,9 +26,9 @@ export class ProductContext {
     const existingProduct = this.#items.find((item) => item.id === product.id);
 
     if (existingProduct) {
-        existingProduct.count += 1;
+        existingProduct.quantity += 1;
     } else {
-      this.#items.push({ ...product, count: 1 });
+      this.#items.push({ ...product, quantity: 1 });
     }
     this.#notify();
   }
@@ -40,8 +40,8 @@ export class ProductContext {
   removeItem(id) {
     this.#items.forEach((product, index) => {
       if (product.id === id) {
-        if (product.count > 1) {
-            product.count -= 1;
+        if (product.quantity > 1) {
+            product.quantity -= 1;
         } else {
           this.#items.splice(index, 1);
         }
