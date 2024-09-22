@@ -31,29 +31,35 @@ export class Cart extends Component {
     let cartContainer = this.parentElement.find("#cartId");
 
     let divCartContainer = $(`<div id="cartId" class="${BASE_CLASS}"></div>`);
-
-    if (cartContainer.length === 0) {
-      cartContainer = $(`
-      <h1>Cart <span class="${BASE_CLASS}__total-indicator">${totalCartItems}</span></h1>
-      <div class="${BASE_CLASS}__summary">
+    let h1Cart = $(
+      `<h1>Cart <span class="${BASE_CLASS}__total-indicator">${totalCartItems}</span></h1>`
+    );
+    let divCartSummary = $(`<div class="${BASE_CLASS}__summary">
         <h2>Summary</h2>
         <div class="${BASE_CLASS}__total-price">
           <h3>Total Price:</h3>
           <h3 id="totalPrice">$${totalPrice}</h3>
         </div>
-      </div>
-      <ul class="${BASE_CLASS}-items"><li>Your cart is empty. Add some items!</li></ul>
-    `);
+      </div>`);
+    let ulCartItems = $(`<ul class="${BASE_CLASS}-items"></ul>`);
+
+    if (totalCartItems === 0) {
+      ulCartItems.append(`<li>Your cart is empty. Add some items!</li>`);
+    } else {
+      new CartItemList(cartContainer.find(`.${BASE_CLASS}-items`));
+    }
+
+    if (cartContainer.length === 0) {
+      cartContainer = divCartContainer;
     } else {
       cartContainer.find("span").text(totalCartItems);
       cartContainer.find("#totalPrice").text(`$${totalPrice}`);
-      //cartContainer.find("ul").empty();
     }
 
-    divCartContainer.append(cartContainer);
-    this.parentElement.append(divCartContainer);
+    divCartContainer.append(h1Cart);
+    divCartContainer.append(divCartSummary);
+    divCartContainer.append(ulCartItems);
 
-    new CartItemList(cartContainer.find(`.${BASE_CLASS}-items`));
+    this.parentElement.append(cartContainer);
   }
-
 }
