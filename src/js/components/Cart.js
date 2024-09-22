@@ -44,7 +44,7 @@ export class Cart extends Component {
     let ulCartItems = $(`<ul class="${BASE_CLASS}-items"></ul>`);
 
     if (totalCartItems === 0) {
-      ulCartItems.append(`<li>Your cart is empty. Add some items!</li>`);
+      ulCartItems.append(`<li>Your cart is empty. Let’s add some items!</li>`);
     } else {
       new CartItemList(cartContainer.find(`.${BASE_CLASS}-items`));
     }
