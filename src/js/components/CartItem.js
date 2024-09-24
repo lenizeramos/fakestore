@@ -3,17 +3,13 @@ import { ProductContext } from "../context/productContext.js";
 
 const BASE_CLASS = "cart";
 
-export class CartItem extends Component{
+export class CartItem extends Component {
   constructor(parentElement, product) {
     super(parentElement, product, { cart: ProductContext.getInstance() });
   }
 
-  removeItem(id) {
-    this.context.cart.removeItem(id);
-  }
-
   render() {
-    const { title, price, image, quantity, id,  } = this.props;
+    const { title, price, image, quantity, id } = this.props;
 
     const item = $(`
     <li class="${BASE_CLASS}-item">
@@ -33,7 +29,7 @@ export class CartItem extends Component{
     `);
 
     item.find("button").on("click", () => {
-      this.removeItem(id);
+      this.context.cart.removeItem(id);
     });
 
     this.parentElement.append(item);

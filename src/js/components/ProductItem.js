@@ -5,9 +5,7 @@ export class ProductItem extends Component {
   constructor(parentElement, props) {
     super(parentElement, props, { product: ProductContext.getInstance() });
   }
-  addToCart() {
-    this.context.product.addToCart(this.props.product);
-  }
+
   render() {
     const { title, price, image, description } = this.props.product;
     const item = $(`
@@ -26,7 +24,7 @@ export class ProductItem extends Component {
       </li> 
     `);
     item.find("button").on("click", () => {
-      this.addToCart();
+      this.context.product.addToCart(this.props.product);
     });
     this.parentElement.append(item);
   }
