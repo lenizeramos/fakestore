@@ -11,23 +11,9 @@ export class Cart extends Component {
     this.context.cart.addStateChangeListener(() => this.render());
   }
 
-  getTotalItems() {
-    return this.context.cart.items.reduce(
-      (totalItems, product) => totalItems + product.quantity,
-      0
-    );
-  }
-
-  getTotalPrice() {
-    return this.context.cart.items.reduce(
-      (totalPrice, product) => totalPrice + product.quantity * product.price,
-      0
-    );
-  }
-
   render() {
-    let totalCartItems = this.getTotalItems();
-    let totalPrice = this.getTotalPrice();
+    let totalCartItems = this.context.cart.getTotalItems();
+    let totalPrice = this.context.cart.getTotalPrice();
     let cartContainer = this.parentElement.find("#cartId");
 
     if (cartContainer.length === 0) {
