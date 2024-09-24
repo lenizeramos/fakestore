@@ -43,7 +43,7 @@ export class Cart extends Component {
         <h2>Summary</h2>
         <div class="${BASE_CLASS}__total-price">
           <h3>Total Price:</h3>
-          <h3 id="totalPrice">$${totalPrice}</h3>
+          <h3 id="totalPrice">CAD$${totalPrice.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</h3>
         </div>
       </div>`);
     let ulCartItems = $(`<ul class="${BASE_CLASS}-items"></ul>`);

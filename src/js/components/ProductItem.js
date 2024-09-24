@@ -19,7 +19,7 @@ export class ProductItem extends Component {
           <div class="product__details">
             <h4>${title}</h4>
             <p>${description}</p>
-            <p class="product__price">$${price}</p>
+            <p class="product__price">$${price.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</p>
           </div>
           <button class="button">Quick Add</button>
         </div>

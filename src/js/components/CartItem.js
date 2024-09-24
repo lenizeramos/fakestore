@@ -14,6 +14,7 @@ export class CartItem extends Component{
 
   render() {
     const { title, price, image, quantity, id,  } = this.props;
+    const totalPrince = price * quantity;
 
     const item = $(`
     <li class="${BASE_CLASS}-item">
@@ -23,9 +24,9 @@ export class CartItem extends Component{
       <div class="${BASE_CLASS}-item__contents">
         <h4>${title}</h4>
         <div class="${BASE_CLASS}-item__details">
-          <p class="${BASE_CLASS}-item__price">$${price}</p>
+          <p class="${BASE_CLASS}-item__price">$${price.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</p>
           <p class="${BASE_CLASS}-item__quantity">x ${quantity}</p>
-          <p class="${BASE_CLASS}-item__price">$${price * quantity}</p>
+          <p class="${BASE_CLASS}-item__price">$${totalPrince.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</p>
         </div>
         <button class="button">Remove</button>
       </div>

@@ -17,7 +17,7 @@
     {
       "id": 2,
       "title": "Suedo Shoes",
-      "price": 300,
+      "price": 300.15,
       "description": "You can dance like pro",
       "image": "https://images.unsplash.com/photo-1560343090-f0409e92791a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzV8fHByb2R1Y3RzfGVufDB8fDB8fHww"
     },
@@ -41,6 +41,34 @@
       "price": 10000,
       "description": "summon me anywhere",
       "image": "https://images.unsplash.com/photo-1562183241-b937e95585b6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fHNob2VzfGVufDB8fDB8fHww"
+    },
+    {
+      "id": 6,
+      "title": "Rocket Sneakers",
+      "price": 250,
+      "description": "Fly to the moon with ease",
+      "image": "https://images.unsplash.com/photo-1469395446868-fb6a048d5ca3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fFJvY2tldCUyMFNuZWFrZXJzfGVufDB8fDB8fHww"
+    },
+    {
+      "id": 7,
+      "title": "Aero Boots",
+      "price": 350,
+      "description": "Boost your speed in any terrain",
+      "image": "https://images.unsplash.com/photo-1605812860427-4024433a70fd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8QWVybyUyMEJvb3RzfGVufDB8fDB8fHww"
+    },
+    {
+      "id": 8,
+      "title": "Glide Loafers",
+      "price": 180,
+      "description": "Slide smoothly on any surface",
+      "image": "https://plus.unsplash.com/premium_photo-1705554330163-2e0ccc1808e2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8R2xpZGUlMjBMb2FmZXJzfGVufDB8fDB8fHww"
+    },
+    {
+      "id": 9,
+      "title": "Hyperwalkers",
+      "price": 400.99,
+      "description": "Walk 10 miles in just 2 minutes",
+      "image": "https://images.unsplash.com/photo-1512374382149-233c42b6a83b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fHNuZWFrZXJzfGVufDB8fDB8fHww"
     }
   ]
 }
