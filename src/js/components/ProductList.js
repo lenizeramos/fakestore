@@ -18,7 +18,6 @@ export class ProductList extends Component {
   }
 
   render() {
-    console.log(this.state.productData);
     (this.state.productData || []).forEach((product) => {
       new ProductItem(this.parentElement, { product });
     });
