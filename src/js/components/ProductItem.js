@@ -10,16 +10,18 @@ export class ProductItem extends Component {
     const { title, price, image, description } = this.props.product;
     const item = $(`
       <li class="product">
+      <div class="product-title">
+        <h4>${title}</h4>
+        <button class="button">Quick Add <i class="fa-solid fa-store" style="color: #fff;"></i></button>
+      </div>
         <div class="product__img">
           <img src="${image}" alt="${title}">
         </div>
         <div class="product__contents">
           <div class="product__details">
-            <h4>${title}</h4>
+          <p class="product__price">$${price.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</p>
             <p>${description}</p>
-            <p class="product__price">$${price.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</p>
           </div>
-          <button class="button">Quick Add</button>
         </div>
       </li> 
     `);

@@ -24,10 +24,16 @@ export class CartItem extends Component {
           <p class="${BASE_CLASS}-item__quantity">x ${quantity}</p>
           <p class="${BASE_CLASS}-item__price">$${totalPrince.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</p>
         </div>
-        <button class="button">Remove</button>
+        <button class="button" style="background-color: #f22">Remove <i class="fa-solid fa-trash" style="color: #fff;"></i></button>
       </div>
     </li>
     `);
+
+    gsap.to(item, {
+      duration: 1,
+      ease: "bounce.out",
+      y: 2
+    })
 
     item.find("button").on("click", () => {
       this.context.cart.removeItem(id);

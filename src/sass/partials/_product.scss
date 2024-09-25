@@ -1,12 +1,27 @@
 .product {
   flex-basis: 100%;
-  padding-bottom: 12px;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  .product-title{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin: 10px;
+    h4{
+      font-size: 26px;
+    }
+  }
+  .product__img{
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
 
   @media screen and (min-width: 700px) {
-    flex-basis: calc(50% - 12px);
+    flex-basis: calc(30% - 0px);
   }
 
   &__img {
@@ -24,5 +39,6 @@
   &__price {
     font-weight: bold;
     letter-spacing: 1px;
+    font-size: 30px;
   }
 }
