@@ -16,6 +16,15 @@ export class Cart extends Component {
     let totalPrice = this.context.cart.getTotalPrice();
     let cartContainer = this.parentElement.find("#cartId");
 
+    totalPrice = totalPrice.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    let string = new Array;
+    string = totalPrice.split(".");
+    let dollars = string[0];
+    let cents = string[1];
+    console.log(string);
+
+
+
     if (cartContainer.length === 0) {
       cartContainer = $(`<div id="cartId" class="${BASE_CLASS}"></div>`);
     } else {
@@ -29,13 +38,14 @@ export class Cart extends Component {
         <h2>Summary</h2>
         <div class="${BASE_CLASS}__total-price">
           <h3>Total Price:</h3>
-          <h3 id="totalPrice">CAD$${totalPrice.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</h3>
+          <h3 id="totalPrice">CAD$${dollars} <span id="cents">${cents}</span></h3>
         </div>
       </div>`);
     let ulCartItems = $(`<ul class="${BASE_CLASS}-items"></ul>`);
 
     cartContainer.find("span").text(totalCartItems);
-    cartContainer.find("#totalPrice").text(`$${totalPrice}`);
+    cartContainer.find("#totalPrice").text(`$${dollars}.`);
+    cartContainer.find("#cents").text(`${cents}`);
 
     if (totalCartItems === 0) {
       ulCartItems.append(`<li>Your cart is empty. Let’s add some items!</li>`);
@@ -46,6 +56,9 @@ export class Cart extends Component {
     cartContainer.append(divCartSummary);
     cartContainer.append(ulCartItems);
 
+    console.log(totalPrice.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }));
+    console.log(typeof totalPrice.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }));
+ 
     this.parentElement.append(cartContainer);
   }
 }

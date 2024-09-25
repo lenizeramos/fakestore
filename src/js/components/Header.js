@@ -2,17 +2,8 @@ import { Component } from "../common/component.js";
 export class Header extends Component {
   render() {
     const children = $(`
-      <header class="header">
-        <h1 class="title1">F</h1>
-        <h1 class="title2">a</h1>
-        <h1 class="title3">k</h1>
-        <h1 class="title4">e</h1>
-        <h1 class="title5">S</h1>
-        <h1 class="title6">t</h1>
-        <h1 class="title7">o</h1>
-        <h1 class="title8">r</h1>
-        <h1 class="title9">e</h1>
-      </header>`);
+      <header class="header"><h1>Fake <span> <img src="https://cdn-icons-png.flaticon.com/128/80/80807.png" alt="logo"> </span>  Store</h1></header>`);
+
     this.parentElement.append(children);
     gsap.from(".title1", {
       duration:2,
