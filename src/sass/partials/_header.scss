@@ -1,4 +1,24 @@
 .header {
+  
+  h1 {
+    font-family: "Montserrat", system-ui;
+    margin: 0;
+    font-size: 2rem;
+    text-shadow: 3px 1px 2px rgba(0, 0, 0, 0.439);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    span{
+      img{
+        width: 4rem;
+        transform: rotate(-25deg);
+      }
+    }
+  }
+
   padding: 24px;
   display: flex;
   justify-content: center;
@@ -9,5 +29,5 @@
   top: 0;
 
   border-bottom: 1px solid rgb(234, 234, 234);
-  box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+  box-shadow: rgba(255, 0, 0, 0.05) 0px 1px 2px 0px;
 }

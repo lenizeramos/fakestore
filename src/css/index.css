@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
 main {
   display: flex;
   gap: 24px;
@@ -41,21 +42,46 @@ main {
   padding: 24px;
 }
 
-h1,
+/* h1,
 h2 {
-  text-shadow: 1px 0px 1px #cccccc, 0px 1px 1px #eeeeee, 2px 1px 1px #cccccc, 1px 2px 1px #eeeeee, 3px 2px 1px #cccccc, 2px 3px 1px #eeeeee, 4px 3px 1px #cccccc, 3px 4px 1px #eeeeee, 5px 4px 1px #cccccc, 4px 5px 1px #eeeeee, 6px 5px 1px #cccccc, 5px 6px 1px #eeeeee, 7px 6px 1px #cccccc;
-}
-
+   text-shadow: 1px 0px 1px #cccccc, 0px 1px 1px #eeeeee, 2px 1px 1px #cccccc,
+    1px 2px 1px #eeeeee, 3px 2px 1px #cccccc, 2px 3px 1px #eeeeee,
+    4px 3px 1px #cccccc, 3px 4px 1px #eeeeee, 5px 4px 1px #cccccc,
+    4px 5px 1px #eeeeee, 6px 5px 1px #cccccc, 5px 6px 1px #eeeeee,
+    7px 6px 1px #cccccc; 
+} */
 .shop {
   flex: 7;
+}
+.shop h1 {
+  font-family: "Montserrat", system-ui;
+  font-size: 1.75rem;
+  /* text-decoration: double underline; */
+  position: relative;
+  z-index: -1;
+}
+.shop h1::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -7px;
+  border-bottom: 2px solid black;
+  box-shadow: 0 4px 0 black;
+  z-index: -1;
+  margin-bottom: 5px;
 }
 .shop h1 {
   margin-bottom: 12px;
 }
 
 .cart {
+  font-family: "Roboto Condensed", sans-serif;
   flex: 3;
   margin-bottom: 24px;
+}
+.cart h1 {
+  font-family: "Montserrat", system-ui;
 }
 .cart h1,
 .cart h2 {
@@ -101,7 +127,21 @@ h2 {
   position: sticky;
   top: 0;
   border-bottom: 1px solid rgb(234, 234, 234);
-  box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+  box-shadow: rgba(255, 0, 0, 0.05) 0px 1px 2px 0px;
+}
+.header h1 {
+  font-family: "Montserrat", system-ui;
+  margin: 0;
+  font-size: 2rem;
+  text-shadow: 3px 1px 2px rgba(0, 0, 0, 0.439);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.header h1 span img {
+  width: 4rem;
+  transform: rotate(-25deg);
 }
 
 .product {
@@ -138,6 +178,7 @@ h2 {
   right: 4px;
   top: -6px;
   letter-spacing: 0.3px;
+  z-index: -1;
 }
 
 .products {
