@@ -18,5 +18,8 @@
     "json-server": "^1.0.0-alpha.21",
     "live-server": "^1.2.2",
     "sass": "^1.70.0"
+  },
+  "dependencies": {
+    "sonner": "^1.5.0"
   }
 }

@@ -8,11 +8,18 @@
   background-color: rgb(211, 239, 255);
 
   @media screen and (min-width: 700px) {
-    flex-basis: calc(50% - 12px);
+    // flex-basis: calc(35% - 5px);
+    flex-basis: calc(31% - -3px);
   }
 
   &__img {
     height: 350px;    
+
+    img:hover{
+      filter: grayscale(1);
+      transform: scale(1.1) rotate(3deg);
+      transition: all 0.5s ease-in-out;
+    }
   }
 
   &__contents {

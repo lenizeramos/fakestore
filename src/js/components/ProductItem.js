@@ -1,5 +1,10 @@
 import { Component } from "../common/component.js";
 import { ProductContext } from "../context/productContext.js";
+// import { toast } from 'sonner';
+// import { Toaster, toast } from 'sonner';
+import { toast } from 'https://cdn.skypack.dev/sonner';
+
+
 
 export class ProductItem extends Component {
   constructor(parentElement, props) {
@@ -33,8 +38,28 @@ export class ProductItem extends Component {
         </div>
       </li> 
     `);
+
+    toastr.options = {
+      "closeButton": false,
+      "debug": false,
+      "newestOnTop": false,
+      "progressBar": true,
+      "positionClass": "toast-bottom-right",
+      "preventDuplicates": false,
+      "onclick": null,
+      "showDuration": "300",
+      "hideDuration": "1000",
+      "timeOut": "2500",
+      "extendedTimeOut": "1000",
+      "showEasing": "swing",
+      "hideEasing": "linear",
+      "showMethod": "fadeIn",
+      "hideMethod": "fadeOut"
+    };
+
     item.find("button").on("click", () => {
       this.context.product.addToCart(this.props.product);
+      toastr.success(`${title} added to cart`);
     });
     this.parentElement.append(item);
   }

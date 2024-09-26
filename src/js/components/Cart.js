@@ -58,6 +58,6 @@ export class Cart extends Component {
     // console.log(totalPrice.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }));
     // console.log(typeof totalPrice.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }));
  
-    this.parentElement.append(cartContainer);
+    // this.parentElement.append(cartContainer);
   }
 }
