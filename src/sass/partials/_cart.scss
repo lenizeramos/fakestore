@@ -5,6 +5,7 @@
   height: fit-content;
   position: fixed;
   top: 30px;
+  //right: 0;
   z-index: 50;
 
   .cart-img {
@@ -45,5 +46,12 @@
     position: relative;
     right: 4px;
     top: -8px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .cart {
+    right: 10px;
+    top: 120px;
   }
 }
