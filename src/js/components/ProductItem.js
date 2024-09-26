@@ -4,14 +4,13 @@ import { ProductContext } from "../context/productContext.js";
 let notyf = new Notyf({
   duration: 2500,
   position: {
-    x: "center",
+    x: "right",
     y: "top",
   },
   types: [
     {
       type: "success",
       background: "#47af2b",
-      className: "custom-success", 
     },
   ],
 });

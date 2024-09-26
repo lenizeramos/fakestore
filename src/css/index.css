@@ -164,7 +164,7 @@ h2 {
   overflow: hidden;
   /* box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px; */
   box-shadow: 10px 10px 20px #babcc1, -10px -10px 20px #fff;
-  background-color: rgba(215, 188, 185, 0.5882352941);
+  background-color: #FDFCFC;
 }
 @media screen and (min-width: 700px) {
   .product {
@@ -215,7 +215,7 @@ h2 {
   font-family: "Roboto Condensed", sans-serif;
   font-weight: 495;
   text-transform: uppercase;
-  background-color: #2056A6;
+  background-color: #153D74;
   display: flex;
   gap: 5px;
   align-items: center;
@@ -267,10 +267,6 @@ h2 {
 }
 .cart-item__quantity {
   border-bottom: 1px solid rgb(193, 193, 193);
-}
-
-.custom-success {
-  width: 400px !important;
 }
 
 body {
