@@ -12,8 +12,7 @@ export class ProductItem extends Component {
       minimumFractionDigits: 2,
       maximumFractionDigits: 2,
     });
-    let string = new Array();
-    string = prices.split(".");
+    let string = prices.split(".");
     let dollars = string[0];
     let cents = string[1];
 
@@ -29,7 +28,7 @@ export class ProductItem extends Component {
         <div class="product__contents">
           <div class="product__details">
             <p id="description">${description}</p>
-            <p class="product__price">$${dollars} <span id="cents">${cents}</span></p>
+            <p class="product__price">$${dollars} <span id="cents">.${cents}</span></p>
           </div>
         </div>
       </li> 

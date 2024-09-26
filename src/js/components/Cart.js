@@ -17,11 +17,10 @@ export class Cart extends Component {
     let cartContainer = this.parentElement.find("#cartId");
 
     totalPrice = totalPrice.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-    let string = new Array;
-    string = totalPrice.split(".");
+    let string = totalPrice.split(".");
     let dollars = string[0];
     let cents = string[1];
-    console.log(string);
+    // console.log(string);
 
 
 
@@ -38,7 +37,7 @@ export class Cart extends Component {
         <h2>Summary</h2>
         <div class="${BASE_CLASS}__total-price">
           <h3>Total Price:</h3>
-          <h3 id="totalPrice">CAD$${dollars} <span id="cents">${cents}</span></h3>
+          <h3 id="totalPrice">CAD$${dollars} <span id="cents">.${cents}</span></h3>
         </div>
       </div>`);
     let ulCartItems = $(`<ul class="${BASE_CLASS}-items"></ul>`);
@@ -56,8 +55,8 @@ export class Cart extends Component {
     cartContainer.append(divCartSummary);
     cartContainer.append(ulCartItems);
 
-    console.log(totalPrice.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }));
-    console.log(typeof totalPrice.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }));
+    // console.log(totalPrice.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }));
+    // console.log(typeof totalPrice.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }));
  
     this.parentElement.append(cartContainer);
   }
