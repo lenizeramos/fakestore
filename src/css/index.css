@@ -60,6 +60,7 @@ h2 {
   /* text-decoration: double underline; */
   position: relative;
   z-index: -1;
+  color: #303030;
 }
 .shop h1::after {
   content: "";
@@ -67,7 +68,7 @@ h2 {
   left: 0;
   right: 0;
   bottom: -7px;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid #303030;
   box-shadow: 0 4px 0 black;
   z-index: -1;
   margin-bottom: 5px;
@@ -121,11 +122,11 @@ h2 {
 
 .header {
   z-index: 10;
+  background: #fefffa;
   padding: 24px;
   display: flex;
   justify-content: center;
   text-transform: uppercase;
-  background-color: white;
   position: sticky;
   top: 0;
   border-bottom: 1px solid rgb(234, 234, 234);
@@ -136,14 +137,24 @@ h2 {
   margin: 0;
   font-size: 2rem;
   text-shadow: 3px 1px 2px rgba(0, 0, 0, 0.439);
+  color: #303030;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
+  opacity: 0;
 }
 .header h1 span img {
   width: 4rem;
   transform: rotate(-25deg);
+  position: relative; /* Necesario para que GSAP pueda animar el desplazamiento */
+}
+
+.shoe-container {
+  position: relative;
+  width: 4rem;
+  height: 4rem;
+  overflow: visible;
 }
 
 .product {
@@ -153,7 +164,7 @@ h2 {
   overflow: hidden;
   /* box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px; */
   box-shadow: 10px 10px 20px #babcc1, -10px -10px 20px #fff;
-  background-color: rgb(211, 239, 255);
+  background-color: rgba(215, 188, 185, 0.5882352941);
 }
 @media screen and (min-width: 700px) {
   .product {
@@ -166,7 +177,7 @@ h2 {
 .product__img img:hover {
   filter: grayscale(1);
   transform: scale(1.1) rotate(3deg);
-  transition: all 0.5s ease-in-out;
+  transition: all 0.8s ease-in-out;
 }
 .product__contents {
   display: flex;
@@ -201,6 +212,9 @@ h2 {
 }
 
 .button {
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 495;
+  text-transform: uppercase;
   background-color: #2056A6;
   display: flex;
   gap: 5px;
@@ -253,6 +267,58 @@ h2 {
 }
 .cart-item__quantity {
   border-bottom: 1px solid rgb(193, 193, 193);
+}
+
+.custom-success {
+  width: 400px !important;
+}
+
+body {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  background: #fefffa;
+  background-size: 400% 400%;
+  background-attachment: fixed;
+  overflow-x: hidden;
+}
+
+.wave_body {
+  top: 80%;
+  transform: translateX(-50%);
+  z-index: -10;
+  position: fixed;
+  width: 100%;
+  min-height: 80%;
+  bottom: 0;
+  left: 0;
+  z-index: -10;
+}
+
+.wave {
+  position: absolute;
+  background-color: rgba(187, 138, 138, 0.25);
+  width: 200%;
+  height: 200%;
+  border-radius: 50%;
+  animation: wave 8s linear infinite alternate;
+}
+
+.wave:nth-child(2) {
+  animation-delay: -10s;
+}
+
+.wave:nth-child(3) {
+  animation-delay: -4s;
+}
+
+@keyframes wave {
+  0% {
+    transform: translateX(-23%);
+  }
+  100% {
+    transform: translateX(23%);
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

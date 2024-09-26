@@ -11,11 +11,10 @@ let notyf = new Notyf({
     {
       type: "success",
       background: "#47af2b",
+      className: "custom-success", 
     },
   ],
 });
-
-
 
 export class ProductItem extends Component {
   constructor(parentElement, props) {
