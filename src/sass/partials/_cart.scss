@@ -1,6 +1,10 @@
 .cart {
   font-family: "Roboto Condensed", sans-serif;
 
+  .cart-img {
+    width: 60px;
+  }
+
   h1 {
     font-family: "Montserrat", system-ui;
   }
@@ -22,6 +26,12 @@
   &__total-price {
     display: flex;
     justify-content: space-between;
+  }
+
+  &__total-indicator {
+    position: relative;
+    top: -40px;
+    font-size: 1.5rem;
   }
 
   #cents {
