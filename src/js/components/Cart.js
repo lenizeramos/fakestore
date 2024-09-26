@@ -59,8 +59,6 @@ export class Cart extends Component {
       new CartItemList(ulCartItems);
     }
     cartContainer.append(cartImage);
-    /* cartContainer.append(divCartSummary);
-    cartContainer.append(ulCartItems); */
     divModalContainer.append(btnClose);
     divModalContainer.append(divCartSummary);
     divModalContainer.append(ulCartItems);
