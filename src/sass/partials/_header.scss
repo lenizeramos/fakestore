@@ -17,7 +17,7 @@
       img {
         width: 4rem;
         transform: rotate(-25deg);
-        position: relative; /* Necesario para que GSAP pueda animar el desplazamiento */
+        position: relative;
       }
     }
   }

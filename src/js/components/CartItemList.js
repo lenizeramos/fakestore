@@ -10,9 +10,14 @@ export class CartItemList extends Component {
   }
   render() {
     this.parentElement.empty();
-
-    this.context.cart.items.forEach((product) => {
-      new CartItem(this.parentElement, product);
-    });
+    if (this.context.cart.items.length === 0) {
+      this.parentElement.append(
+        `<li>Your cart is empty. Let’s add some items!</li>`
+      );
+    } else {
+      this.context.cart.items.forEach((product) => {
+        new CartItem(this.parentElement, product);
+      });
+    }
   }
 }

@@ -20,22 +20,18 @@ export class Header extends Component {
     const shoeContainer = document.querySelector(".shoe-container");
     const storeText = document.querySelector(".store-text");
 
-    // Configurar posición inicial
     gsap.set([fakeText, shoeContainer, storeText], {
       y: 20,
       opacity: 0,
     });
 
-    // Timeline para la animación completa
     const tl = gsap.timeline({ defaults: { ease: "power2.out" } });
 
-    // Animación de aparición suave
     tl.to(title, { duration: 0.5, opacity: 1 })
       .to(fakeText, { duration: 0.5, y: 0, opacity: 1 })
       .to(shoeContainer, { duration: 0.5, y: 0, opacity: 1 }, "-=0.3")
       .to(storeText, { duration: 0.5, y: 0, opacity: 1 }, "-=0.3");
 
-    // Animación adicional para el zapato
     tl.to(
       "#shoe",
       {
@@ -47,20 +43,18 @@ export class Header extends Component {
       "-=0.2"
     );
 
-    tl.to(
-      ".fake-text",{
-        x: -22.5,
-        scale: 1.2,
-        ease: "elastic.out(1, 0.3)",
-        duration: 0.5
+    tl.to(".fake-text", {
+      x: -22.5,
+      scale: 1.2,
+      ease: "elastic.out(1, 0.3)",
+      duration: 0.5,
     });
 
-    tl.to(
-      ".store-text",{
-        x: 22.5,
-        scale: 1.2,
-        ease: "elastic.out(1, 0.3)",
-        duration: 0.5
+    tl.to(".store-text", {
+      x: 22.5,
+      scale: 1.2,
+      ease: "elastic.out(1, 0.3)",
+      duration: 0.5,
     });
   }
 }

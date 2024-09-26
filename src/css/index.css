@@ -165,7 +165,7 @@ h2 {
 .header h1 span img {
   width: 4rem;
   transform: rotate(-25deg);
-  position: relative; /* Necesario para que GSAP pueda animar el desplazamiento */
+  position: relative;
 }
 .header .cart-img {
   width: 60px;
@@ -303,7 +303,6 @@ h2 {
   background-color: rgba(0, 0, 0, 0.4);
 }
 
-/* Modal Content */
 .modal-content {
   background-color: #fefefe;
   position: fixed;
@@ -316,7 +315,6 @@ h2 {
   overflow-y: auto;
 }
 
-/* The Close Button */
 .close {
   color: #aaaaaa;
   float: right;
