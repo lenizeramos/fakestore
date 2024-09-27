@@ -82,7 +82,7 @@ export class Cart extends Component {
       spanCents.text(`.${cents}`);
 
       cartContainer.find("#totalCartItems").text(totalCartItems);
-      cartContainer.find("#totalPrice").text(`$${dollars}`).append(spanCents);
+      cartContainer.find("#totalPrice").text(`CAD$${dollars}`).append(spanCents);
 
       new CartItemList(cartContainer.find("ul"));
     }

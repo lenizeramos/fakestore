@@ -1,5 +1,5 @@
 import { Component } from "../common/component.js";
-import { ProductItem } from "./productItem.js";
+import { ProductItem } from "./ProductItem.js";
 
 export class ProductList extends Component {
   constructor(parentElement) {
