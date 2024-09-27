@@ -11,6 +11,15 @@
 @import "partials/cart-item";
 @import "partials/modal";
 
+.notyf__message{
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 2ch;
+}
+
+.notyf__toast{
+  max-width: 400px !important;
+}
+
 body {
   position: relative;
   height: 100vh;

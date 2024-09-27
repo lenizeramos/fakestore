@@ -11,6 +11,7 @@ let notyf = new Notyf({
     {
       type: "success",
       background: "#47af2b",
+      duration: 2000,
     },
   ],
 });
