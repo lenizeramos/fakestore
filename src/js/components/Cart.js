@@ -32,7 +32,7 @@ export class Cart extends Component {
     }
 
     let h1Cart = $(
-      `<h1>Cart <span class="${BASE_CLASS}__total-indicator">${totalCartItems}</span></h1>`
+      `<h1><i class="fa-solid fa-store" style="color: #000000;"> </i><span class="${BASE_CLASS}__total-indicator">${totalCartItems}</span></h1>`
     );
     let divCartSummary = $(`<div class="${BASE_CLASS}__summary">
         <h2>Summary</h2>

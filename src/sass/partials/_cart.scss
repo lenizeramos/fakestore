@@ -5,12 +5,13 @@
     font-family: "Montserrat", system-ui;
   }
 
-  flex: 3;
+  flex: 2;
   margin-bottom: 24px;
 
-  h1,
-  h2 {
+  h1{
     margin-bottom: 12px;
+    display: flex;
+    justify-content: space-around;
   }
 
   &__summary {
