@@ -34,7 +34,7 @@ export class Cart extends Component {
     if (cartContainer.length === 0) {
       cartContainer = $(`<div id="cartId" class="${BASE_CLASS}"></div>`);
       cartImage = $(
-        `<h1 id="cartImage"><img src="media/shopping-cart-371980_1280.png" alt="" class="cart-img"><span id="totalCartItems" class="${BASE_CLASS}__total-indicator">${totalCartItems}</span></h1>`
+        `<h1 id="cartImage"><img src="media/shopping-cart-371980_1280.png" alt="cart" class="cart-img"><span id="totalCartItems" class="${BASE_CLASS}__total-indicator">${totalCartItems}</span></h1>`
       );
 
       divModal = $(`<div id="myModal" class="modal"></div>`);
@@ -64,25 +64,27 @@ export class Cart extends Component {
       this.parentElement.append(cartContainer);
 
       cartImage.on("click", () => {
-        divModal.css("display", "block");
+        divModal.addClass("modal-content-active");
       });
 
       btnClose.on("click", () => {
-        divModal.css("display", "none");
+        divModal.removeClass("modal-content-active");
       });
 
       $(window).on("click", function (event) {
         if ($(event.target).is(divModal)) {
-          $(divModal).css("display", "none");
+          divModal.removeClass("modal-content-active");
         }
       });
     } else {
-      //cartContainer.empty();
       let spanCents = cartContainer.find("#cents");
       spanCents.text(`.${cents}`);
 
       cartContainer.find("#totalCartItems").text(totalCartItems);
-      cartContainer.find("#totalPrice").text(`CAD$${dollars}`).append(spanCents);
+      cartContainer
+        .find("#totalPrice")
+        .text(`CAD$${dollars}`)
+        .append(spanCents);
 
       new CartItemList(cartContainer.find("ul"));
     }
