@@ -1,63 +1,53 @@
-> **Note:** This repository is a personal backup of coursework originally developed as part of my studies at Cornerstone College. It was cloned from a institutional and private repository to preserve my contributions and development history.
+> **Note:** This repository is a personal backup of coursework originally developed as part of my studies at Cornerstone College.  
+> It was cloned from an institutional and private repository to preserve my contributions and development history.
 
-# Mid Term - Fake Store
+# 🛒 Fake Store – OOP-Based JavaScript Shopping Experience
 
-## Description
+---
 
-In this project, you will create a fake shop using OOP. You will create classes for each entity and use them to create the shop.
+## 📖 Overview
 
-## Objectives
+**Fake Store** is a class-based web application developed as part of a coursework assignment.  
+The project demonstrates practical application of **Object-Oriented Programming (OOP)** principles in **JavaScript**, along with **SCSS styling**, **mock API integration**, and real-time **DOM manipulation**.
 
-- Create one file per class and import where needed
-- Show a list of products from an API, with image, title, price and description
-- Be able to add products to the cart
-- Show the total amount of the cart
+It offers a fully functional online shopping experience with modular architecture and clean UI design.
 
-## Instructions and Requirements
+---
 
-### Entities (classes)
+## 🚀 Features
 
-- Cart
-- CartItem
-- CartItemList
-- Header
-- ProductItem
-- ProductList
-- Shop
-- App
-- and more as needed
+- ✅ Modular **OOP architecture** with ES6 class structure
+- 🛍️ Dynamic **product list** fetched from a mock API
+- 🛒 Interactive **shopping cart** with add/remove features
+- 💰 **Real-time total updates** on cart interaction
+- 📱 Fully **responsive UI** styled with SCSS
+- 🔔 **Toast notifications** for smooth UX feedback
 
-> You can do differently if you think you can come up with better solution!!
+---
 
-### Step 1 - Review index.static.html and Watch Demo
+## 🛠️ Tech Stack
 
-Please reference [`index.static.html`](./index.static.html) and [DEMO](https://www.loom.com/share/26304f8a106b460e82dbe7707201b776?sid=13d15206-ca50-4342-bd39-c2d86978c408) to get familiar with UI.
+- **Frontend**: HTML5, JavaScript (ES6+), SCSS (via Sass)
+- **API Simulation**:JSON Server
+- **UX Enhancements**:[Sonner](https://www.npmjs.com/package/sonner) – Toasts
+- **Dev Workflow**: Live Server, Concurrently 
+- **Optional Types**: @types/jquery
 
-> UI can be modified based but behavior **MUST** be working as expected!!
+---
 
-### Step 2 - Analyze the behavior
+## 🧪 Available Scripts
 
-User should be able to
+Use these scripts from `package.json` to start development:
 
-1. view the list of products that can be added to cart
-2. view the Cart summary with total price
-3. view either the list of items in the cart or placeholder when cart is empty
-4. add item to the cart and increase quantity by pressing `Quick Add` button
-5. remove item from cart and decrease quantity by pressing `Remove` button
-6. view the Total Price gets updated as cart items change
+```bash
+npm install    	      # Install all dependencies listed in package.json
+npm run compile:css   # Watch and compile SCSS from src/sass to src/css
+npm run html          # Start Live Server (serves from src/)
+npm run server        # Start JSON Server on http://localhost:8000
+npm run dev           # Run all above scripts concurrently
+```
+---
 
-### Step 3 - check the data structure
+## 🪪 License
 
-Please open [`server/db.json`](./server/db.json) and review the data structure
-
-Alternatively, https://fakestoreapi.com/products
-
-> Note: You will need to fetch data either way
-
-### Step 4 - Review given Files
-
-You may get many clues by scanning through the files. You are not required to use the existing codes. You are free to come up with your own.
-
-### Step 5 - Start your midterm project
-
-GOOD LUCK!!
+This project is for educational purposes only and is not intended for commercial use or redistribution.
