@@ -7,6 +7,8 @@
 
 ## 📖 Overview
 
+🔗 [Live Demo](https://my-fakestore.vercel.app)
+
 **Fake Store** is a class-based web application developed as part of a coursework assignment.  
 The project demonstrates practical application of **Object-Oriented Programming (OOP)** principles in **JavaScript**, along with **SCSS styling**, **mock API integration**, and real-time **DOM manipulation**.
 
